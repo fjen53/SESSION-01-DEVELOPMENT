@@ -1,5 +1,4 @@
-FROM tomcat:8.0-alpine
-COPY /home/ansible/webapp.war  /usr/local/tomcat/webapp
+FROM node:alpine
 
 ADD package.json /app/
 
