@@ -3,3 +3,4 @@ COPY /home/ansible/webapp.war  /usr/local/tomcat/webapps
 ENV var=key
 ENV Eric=prof
 ENV Peter=DevOps
+RUN touch file1
