@@ -4,3 +4,4 @@ VOLUME /volume
 VOLUME /gueno3
 ENV key=pair
 ENV p=mg
+volume=yvan
