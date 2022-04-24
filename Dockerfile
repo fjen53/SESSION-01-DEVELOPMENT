@@ -1,4 +1,5 @@
-FROM tomcat:8.0-alpine
+FROM tomcat
 COPY /home/ansible/webapp.war  /usr/local/tomcat/webapps
-VOLUME /volume
-VOLUME /gueno3
+VOLUME /cedric
+COPY /home/ansible/webapp.war /cedric
+RUN rm -rf /home/ansible/*
