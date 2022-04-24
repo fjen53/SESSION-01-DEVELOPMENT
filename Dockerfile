@@ -1,6 +1,6 @@
-FROM tomcat:8.0-alpine
+iFROM tomcat:8.0-alpine
 COPY /home/ansible/webapp.war  /usr/local/tomcat/webapps
 VOLUME /volume
-VOLUME /gueno3
+VOLUME /amy
 ENV key=pair
 ENV p=mg
