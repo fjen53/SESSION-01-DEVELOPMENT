@@ -1,6 +1,9 @@
-FROM tomcat:8.0-alpine
+FROM ubuntu
 COPY /home/ansible/webapp.war  /usr/local/tomcat/webapps
 VOLUME /volume
 VOLUME /gueno3
 ENV key=pair
 ENV p=mg
+ENV t=hello
+expose 80
+
