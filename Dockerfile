@@ -1,4 +1,4 @@
-FROM tomcat:8.0-alpine
+FROM alpine:3.14.6
 COPY /home/ansible/webapp.war  /usr/local/tomcat/webapps
 VOLUME /volume
-VOLUME /gueno3
+VOLUME /cedric
