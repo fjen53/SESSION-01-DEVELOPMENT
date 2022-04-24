@@ -1,4 +1,7 @@
-  pipeline {
+
+
+
+pipeline {
 agent { 
     label 'deploy-main' 
     }
@@ -32,6 +35,8 @@ options {
             }
         }
  
+      
+      
     //////////////////////////////////
        stage('warning') {
       steps {
@@ -162,11 +167,10 @@ EOF
 
 
 
-
     }
 
 
-post {
+ post {
     always {
       script {
         notifyUpgrade(currentBuild.currentResult, "POST")
@@ -176,7 +180,6 @@ post {
       deleteDir()
     }
   }
-
 
 
 }
