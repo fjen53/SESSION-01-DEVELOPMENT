@@ -1,0 +1,7 @@
+find / -name secure
+tail -f /var/log/secure
+cat /var/log/secure | grep "Failed"
+cat /var/log/secure | grep "Failed"  | awk '{print $9}'
+cat /var/log/secure | grep "Failed"  | awk '{print $9}' | sort -u
+cat /var/log/secure | grep "Failed"  | awk '{print $9}' | sort -u |wc -l
+cat /var/log/secure | grep "Failed"  | awk '{print $9}' | sort -u |wc -l > users.t
