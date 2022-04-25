@@ -5,3 +5,7 @@ cat /var/log/secure | grep "Failed"  | awk '{print $9}'
 cat /var/log/secure | grep "Failed"  | awk '{print $9}' | sort -u
 cat /var/log/secure | grep "Failed"  | awk '{print $9}' | sort -u |wc -l
 cat /var/log/secure | grep "Failed"  | awk '{print $9}' | sort -u |wc -l > users.t
+i want to add multiple volume
+i am still leaning
+i will be one of the best
+thank you
