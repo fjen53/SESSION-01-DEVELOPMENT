@@ -2,37 +2,34 @@ pipeline {
     agent any
 
     stages {
-        stage('Creating folders') {
+        stage('cleaning environment') {
             steps {
                 sh '''
-                mkdir jeanne
-                mkdir foko
+                docker rm -f $docker ps -aq
                 '''
             }
         }
 
-        stage('Creating files') {
+        stage('build the image') {
             steps {
                 sh '''
-                touch devops
-                touch jenkins
+                docker build -t jeanne:001 .
                 '''
             }
         }
 
-        stage('Checking system') {
+        stage('Checking images') {
             steps {
                 sh '''
-                cat /etc/*release
+                docker images
                 '''
             }
         }
 
-        stage('Commands') {
+        stage('Checking container') {
             steps {
                 sh '''
-                ls
-                pwd
+                docker run -i --name foko jeanne:001
                 '''
             }
         }
